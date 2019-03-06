@@ -38,6 +38,7 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
+
 class App extends Component {
   componentDidMount = () => {
     SplashScreen.hide();
