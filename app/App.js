@@ -38,6 +38,7 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
+import LoginScreenScreen from "./components/login-screen-component/LoginScreenScreen";
 
 class App extends Component {
   componentDidMount = () => {
@@ -49,20 +50,6 @@ class App extends Component {
   }
 }
 export default App;
-
-class WelcomeScreen extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Button
-          title="Login"
-          onPress={() => this.props.navigation.navigate("Dashboard")}
-        />
-        <Button title="Sign Up" onPress={() => alert("button pressed")} />
-      </View>
-    );
-  }
-}
 
 class DashboardScreen extends Component {
   render() {
@@ -146,7 +133,7 @@ const AppDrawerNavigator = createDrawerNavigator({
 });
 
 const AppSwitchNavigator = createSwitchNavigator({
-  Welcome: { screen: WelcomeScreen },
+  Login: { screen: LoginScreenScreen },
   Dashboard: { screen: AppDrawerNavigator }
 });
 
