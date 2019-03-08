@@ -51,16 +51,6 @@ class App extends Component {
 }
 export default App;
 
-class DashboardScreen extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>DashboardScreen</Text>
-      </View>
-    );
-  }
-}
-
 class Feed extends Component {
   render() {
     return (
@@ -106,6 +96,7 @@ const DashboardTabNavigator = createBottomTabNavigator(
     }
   }
 );
+
 const DashboardStackNavigator = createStackNavigator(
   {
     DashboardTabNavigator: DashboardTabNavigator
